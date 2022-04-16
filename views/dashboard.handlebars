@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #f8f9fa">
+   <header>
+        {{>menu}}
+    </header>
+
+    <section>
+        {{#if  products}}
+        <h1 id="bienvenido" style="text-align: center;">Bienvenido al Mercado WEB, seleccione sus productos</h1>
+        <div class="container row d-flex justify-content-center mx-5">
+            {{#each products}}
+                {{>producto nombre=this}}
+            {{/each}}
+        </div>
+        {{/if}}
+    </section>
+</body>
+</html>
